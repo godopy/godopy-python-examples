@@ -1,0 +1,37 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
+
+[application]
+
+config/name="Dodge the Creeps"
+run/main_scene="res://Main.tscn"
+config/icon="res://icon.png"
+
+[display]
+
+window/size/width=480
+window/size/height=720
+
+[python]
+
+config/library="res://dodge-the-creeps.gdnlib"
+config/gdnlib_module="dodge_the_creeps"
+config/module_search_path/main="res://.bin/dodge-the-creeps.pak"
+config/module_search_path/extended="/Users/ii/src/godopy/venv/lib/python3.8/site-packages"
+config/module_search_path/development=""
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
