@@ -45,5 +45,5 @@ class TermShell(bindings.MainLoop):
 
     @staticmethod
     def _register_methods():
-        register_method(TermShell, '_initialize', TermShell._initialize)
-        register_method(TermShell, '_idle', TermShell._idle)
+        register_method(TermShell, '_initialize')
+        register_method(TermShell, '_idle')

@@ -20,8 +20,8 @@ class Player(bindings.Area2D):
         self.screen_size = None
 
     def _ready(self):
-        self.screen_size = self.get_viewport_rect().to_numpy()[-2:]
-        print('SCREEN SIZE', self.screen_size)
+        self.screen_size = self.get_viewport_rect().size.to_numpy()
+        print('SCREEN SIZE:', self.get_viewport_rect().size, self.screen_size)
         self.hide()
 
     @property
