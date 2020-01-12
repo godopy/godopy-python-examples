@@ -1,5 +1,3 @@
-from godot.nativescript import register_class, register_tool_class
-
 from . import player
 
 try:
@@ -11,6 +9,6 @@ except ModuleNotFoundError:
 
 def _nativescript_init():
     if TOOLS:
-        register_tool_class(term_shell.TermShell)
+        term_shell._init()
 
-    register_class(player.Player)
+    player._init()

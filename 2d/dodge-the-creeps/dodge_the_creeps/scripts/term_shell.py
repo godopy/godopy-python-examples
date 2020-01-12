@@ -2,7 +2,7 @@
 TODO: Move to `godopy/contrib/scripts/` and allow installation from there
 """
 from godot import bindings
-from godot.nativescript import register_method
+from godot.nativescript import register_tool_class, register_method
 
 from IPython.terminal.embed import InteractiveShellEmbed
 
@@ -47,3 +47,7 @@ class TermShell(bindings.MainLoop):
     def _register_methods():
         register_method(TermShell, '_initialize')
         register_method(TermShell, '_idle')
+
+
+def _init():
+    register_tool_class(TermShell)

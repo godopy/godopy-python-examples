@@ -4,7 +4,7 @@ from godot import bindings
 from godot.bindings import Input
 from godot.core.types import Vector2
 
-from godot.nativescript import register_method, register_property, register_signal
+from godot.nativescript import register_class, register_method, register_property, register_signal
 
 INPUT_MAP = {
     'ui_right': Vector2(1, 0).to_numpy(),
@@ -21,7 +21,7 @@ class Player(bindings.Area2D):
 
     def _ready(self):
         self.screen_size = self.get_viewport_rect().size.to_numpy()
-        print('SCREEN SIZE:', self.get_viewport_rect().size, self.screen_size)
+        print('SCREEN SIZE:', self.screen_size)
         self.hide()
 
     @property
@@ -56,15 +56,11 @@ class Player(bindings.Area2D):
             self.sprite.animation = 'up'
             self.sprite.flip_v = velocity[1] > 0
 
-    def _on_Player_body_entered(self, *args):
-        print('ENTERED!', args)
+    def _on_Player_body_entered(self, body):
+        # TODO: GodoPy should pass a correct wrapper for the "body" argument (not None as it is now)
         self.hide()
-        print('HIDDEN')
         self.emit_signal('hit')
-        print('SIGNALED')
-        # self.shape.set_deferred('disabled', True)
-        self.shape.disabled = True
-        print('DISABLED')
+        self.shape.set_deferred('disabled', True)
 
     def start(self, pos):
         self.position = pos
@@ -80,3 +76,7 @@ class Player(bindings.Area2D):
 
         register_property(Player, 'speed', 400)
         register_signal(Player, 'hit')
+
+
+def _init():
+    register_class(Player)
