@@ -9,8 +9,8 @@ godot_setup(
     # set_development_path=True,
     library=GenericGDNativeLibrary('dodge-the-creeps.gdnlib', singleton=False),
     extensions=[
-        NativeScript('scripts/TermShell.gdns', class_name='TermShell', python_sources=['scripts/term_shell.py']),
+        NativeScript('scripts/TermShell.gdns', class_name='TermShell'),
 
-        NativeScript('Player.gdns', class_name='Player', python_sources=['player.py'])
+        NativeScript('Player.gdns', class_name='Player')
     ]
 )

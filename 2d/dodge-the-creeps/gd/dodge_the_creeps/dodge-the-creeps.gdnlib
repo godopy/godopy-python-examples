@@ -7,10 +7,10 @@ reloadable=false
 
 [entry]
 
-OSX.64="res://.bin/osx/dodge-the-creeps.cpython-37m-darwin.so"
-Server.64="res://.bin/osx/dodge-the-creeps.cpython-37m-darwin.so"
+OSX.64="res://.bin/lib/_godopy.cpython-38-darwin.so"
+Server.64="res://.bin/lib/_godopy.cpython-38-darwin.so"
 
 [dependencies]
 
-OSX.64=[ "res://.bin/dodge-the-creeps.pak" ]
-Server.64=[ "res://.bin/dodge-the-creeps.pak" ]
+OSX.64=[  ]
+Server.64=[  ]

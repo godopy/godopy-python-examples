@@ -28,8 +28,8 @@ window/size/height=720
 
 config/library="res://dodge-the-creeps.gdnlib"
 config/gdnlib_module="dodge_the_creeps"
-config/module_search_path/main="res://.bin/dodge-the-creeps.pak"
-config/module_search_path/extended="/Users/ii/src/godopy/venv/lib/python3.8/site-packages"
+config/module_search_path/main="res://.bin/lib"
+config/module_search_path/extended="res://.bin/libtools"
 config/module_search_path/development=""
 
 [rendering]
