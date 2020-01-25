@@ -7,10 +7,10 @@ reloadable=false
 
 [entry]
 
-Windows.64="res://.bin/lib/_godopy.cp38-win_amd64.pyd"
-Server.64="res://.bin/lib/_godopy.cp38-win_amd64.pyd"
+OSX.64="res://.bin/lib/_godopy.cpython-38-darwin.so"
+Server.64="res://.bin/lib/_godopy.cpython-38-darwin.so"
 
 [dependencies]
 
-Windows.64=[  ]
+OSX.64=[  ]
 Server.64=[  ]
