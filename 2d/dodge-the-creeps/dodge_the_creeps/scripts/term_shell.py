@@ -1,6 +1,7 @@
 """
 TODO: Move to `godopy/contrib/scripts/` and allow installation from there
 """
+
 from godot import bindings
 from godot.nativescript import register_tool_class, register_method
 

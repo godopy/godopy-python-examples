@@ -8,21 +8,9 @@
 
 config_version=4
 
-_global_script_classes=[  ]
-_global_script_class_icons={
-
-}
-
 [application]
 
-config/name="Dodge the Creeps"
-run/main_scene="res://Main.tscn"
-config/icon="res://icon.png"
-
-[display]
-
-window/size/width=480
-window/size/height=720
+run/main_scene="main.tscn"
 
 [python]
 
@@ -30,8 +18,4 @@ config/library="res://dodge-the-creeps.gdnlib"
 config/gdnlib_module="dodge_the_creeps"
 config/module_search_path/main="res://.bin/lib"
 config/module_search_path/extended="res://.bin/libtools"
-config/module_search_path/development=""
-
-[rendering]
-
-environment/default_environment="res://default_env.tres"
+config/module_search_path/development="/Users/ii/demos/python-examples/2d/dodge-the-creeps"

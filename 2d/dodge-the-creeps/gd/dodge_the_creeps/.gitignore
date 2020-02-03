@@ -1,3 +1,6 @@
 .import
 .bin
 logs/
+
+# Generated automatically
+/project.godot
