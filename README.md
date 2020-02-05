@@ -14,15 +14,15 @@ $ pip install GodoPy
 ```
 $ cd 2d/dodge-the-creeps
 $ ./control.py installscripts  # Doesn't work under 0.0.1
+$ ./control.py runeditor  # Reimport assets
 $ ./control.py run
-$ ./control.py runscript res://scripts/TermShell.gdns
-$ ./control.py runeditor
+$ ./control.py runscript res://scripts/TermShell.gdns  # Executes scripts/term_shell.py
 ```
 
-### Simple
+## Simple
 
 ```
-$ cd 2d/simple
+$ cd simple
 $ godopy enable-runpy
 $ godopy runpy example
 $ godopy runpy ball
