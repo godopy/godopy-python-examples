@@ -1,2 +1,2 @@
-rm -rf ./gd/dodge_the_creeps/.bin
+rm -rf ./__godot__/.bin
 rm -rf ./build
