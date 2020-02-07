@@ -2,7 +2,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve(strict=True).parents[1]
 
-GODOT_PROJECT = BASE_DIR / 'gd' / 'dodge_the_creeps'
+GODOT_PROJECT = BASE_DIR / '__godot__'
 
 PYTHON_PACKAGE = 'dodge_the_creeps'
 GDNATIVE_LIBRARY = 'dodge-the-creeps.gdnlib'
