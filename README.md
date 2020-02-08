@@ -13,7 +13,7 @@ $ pip install GodoPy
 
 ```
 $ cd 2d/dodge-the-creeps
-$ ./control.py installscripts  # Doesn't work under 0.0.1
+$ ./control.py installscripts
 $ ./control.py runeditor  # Reimport assets
 $ ./control.py run
 $ ./control.py runscript res://scripts/TermShell.gdns  # Executes scripts/term_shell.py
