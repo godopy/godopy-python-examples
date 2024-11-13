@@ -1,12 +1,14 @@
 # Byte-compiled / optimized / DLL files
-__pycache__/
 *.py[cod]
 *$py.class
+__pycache__/*
+!__pycache__/.gdignore
 
-# Godot-specific ignores
-.import/
-export.cfg
-export_presets.cfg
+# Virtual env
+/venv
+
+# Godot 4+ specific ignores
+.godot/
 
 # OS
 .DS_Store
