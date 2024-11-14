@@ -6,7 +6,7 @@ from godot.classdb import Sprite2D
 
 __extends__ = Sprite2D
 
-time_passed = 0.0
+time_passed: float = 0.0
 
 def _process(self, delta: float) -> None:
     self.time_passed += delta
