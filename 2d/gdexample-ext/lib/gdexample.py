@@ -1,11 +1,14 @@
 import numpy as np
 
-import godot
+from godot.core import GDCLASS
 from godot.classdb import Sprite2D
 from godot.types import Vector2
 
 
-class GDExample(godot.Class, inherits=Sprite2D):
+@GDCLASS(Sprite2D)
+class GDExample:
+    __slots__ = ['time_passed']
+
     def __init__(self):
         self.time_passed = 0.0
 
@@ -18,6 +21,3 @@ class GDExample(godot.Class, inherits=Sprite2D):
         )
 
         self.set_position(new_position)
-
-    def _ready(self) -> None:
-        print("READY")

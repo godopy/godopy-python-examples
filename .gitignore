@@ -6,6 +6,7 @@ __pycache__/*
 
 # Godot 4+ specific ignores
 .godot/
+*.uid
 
 # OS
 .DS_Store
