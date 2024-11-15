@@ -4,12 +4,12 @@ from godot.core import GDCLASS
 from godot.enums import PropertyHint
 from godot.types import Vector2
 from godot.classdb import Sprite2D
-from godot.property_info import PropertyInfo
+from godot.property_info import PropertyInfo, PropertyInfoRange
 
 
 @GDCLASS(Sprite2D)
 class GDExample:
-    __slots__ = ['time_passed', 'amplitude', 'speed']
+    __slots__ = ['time_passed', 'time_emit', 'amplitude', 'speed']
 
     @classmethod
     def _bind_methods(cls):
@@ -19,11 +19,14 @@ class GDExample:
 
         cls.bind_method(cls.set_speed)
         cls.bind_method(cls.get_speed)
-        speed = PropertyInfo(float, 'speed', PropertyHint.PROPERTY_HINT_RANGE, '0,20,0.01')
-        cls.add_property(speed, 'set_speed', 'get_speed')
+        cls.add_property(PropertyInfoRange('speed', slice(0, 20, 0.01)), 'set_speed', 'get_speed')
+
+        cls.add_signal('position_changed', PropertyInfo(Sprite2D, 'node'), PropertyInfo(Vector2, 'new_pos'))
+
 
     def __init__(self):
         self.time_passed = 0.0
+        self.time_emit = 0.0
         self.amplitude = 10.0
         self.speed = 1.0
 
@@ -51,3 +54,8 @@ class GDExample:
         )
 
         self.set_position(new_position)
+
+        self.time_emit += delta
+        if self.time_emit > 1.0:
+            self.emit_signal('position_changed', self, new_position)
+            self.time_emit = 0.0
