@@ -4,7 +4,4 @@
 bin/*
 !bin/*.gdextension
 
-python/*
-!python/.gdignore
-
 lib/__pycache__

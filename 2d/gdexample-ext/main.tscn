@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://crmfwfvwwbfww"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://cvpg8fb4kv6lk" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://xcml3adupnrh" path="res://icon.svg" id="1_ig7tw"]
 
 [node name="Main" type="Node"]
@@ -9,7 +9,7 @@ script = ExtResource("1_0xm2m")
 [node name="GDExample" type="GDExample" parent="."]
 amplitude = 15.0
 speed = 1.76
-position = Vector2(28.591, 15.9747)
+position = Vector2(0.319481, 29.5785)
 texture = ExtResource("1_ig7tw")
 
 [connection signal="position_changed" from="GDExample" to="." method="_on_gdexample_position_changed"]
